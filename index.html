@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .header-logo-cell {
+            padding: 20px 20px 10px 20px;
+        }
+
+        .header-logo {
+            display: block;
+            width: 160px;
+            height: auto;
+            border: 0;
+            margin-bottom: -40px;
+        }
+
+        .header-address-cell {
+            padding: 0 20px 20px 20px;
+            text-align: right;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.45;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 0.12px;
+            color: #00071a;
+        }
+
+        .hero-title {
+            color: white;
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            padding: 30px 20px 20px 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            color: white;
+            font-size: 26px;
+            font-weight: 500;
+            text-align: center;
+            padding: 0 20px 30px 20px;
+            line-height: 1.3;
+        }
+
+        .header-white-box-cell {
+            padding: 0;
+        }
+
+        .features-wrap {
+            padding: 0 10px 24px 10px;
+        }
+
+        .features-table {
+            width: 100%;
+        }
+
+        .feature-item {
+            width: 25%;
+            padding: 0 10px;
+            vertical-align: top;
+        }
+
+        .contact-grid {
+            width: 100%;
+        }
+
+        .contact-row {
+            height: 260px;
+        }
+
+        .contact-left-card {
+            width: 33%;
+            background-color: #24697a;
+            padding: 16px;
+            border-radius: 16px;
+            vertical-align: top;
+            height: 260px;
+        }
+
+        .contact-middle-card {
+            width: 30%;
+            padding: 0 16px;
+            vertical-align: top;
+            height: 260px;
+        }
+
+        .contact-middle-inner {
+            background-color: #c7a844;
+            padding: 16px;
+            border-radius: 16px;
+            text-align: center;
+            vertical-align: middle;
+            height: 260px;
+        }
+
+        .contact-middle-table {
+            height: 260px;
+        }
+
+        .contact-right-card {
+            width: 37%;
+            border-left: 2px solid #c7a844;
+            padding-left: 16px;
+            vertical-align: middle;
+            height: 260px;
+        }
+
+        .contact-mobile-gutter {
+            width: 100%;
+        }
+
+        .bottom-points-wrap {
+            padding: 16px 16px 8px 16px;
+        }
+
+        .trust-icons-table {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .trust-icon-col {
+            width: 33.33%;
+            padding: 0 30px;
+            vertical-align: top;
+        }
+
+        .bottom-bullets-table {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .bottom-bullet-col {
+            width: 50%;
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.3em;
+            vertical-align: top;
+        }
+
+        .bottom-cta-table {
+            width: 100%;
+            max-width: 800px;
+            background-color: #0f2d53;
+            border-radius: 20px;
+        }
+
+        .bottom-cta-row {
+            height: 150px;
+        }
+
+        .bottom-cta-btn-box {
+            background-color: #c7a844;
+            border-radius: 10px;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.2;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .footer-legal-text {
+            color: #d7e0ea;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.35;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            word-break: break-word;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+
+            .header-white-box-cell {
+                padding: 0 20px !important;
+            }
+
+            .header-logo-cell {
+                padding: 16px 16px 8px 16px !important;
+            }
+
+            .header-logo {
+                width: 130px !important;
+                margin-bottom: 0 !important;
+            }
+
+            .header-address-cell {
+                padding: 6px 16px 16px 16px !important;
+                text-align: center !important;
+                font-size: 14px !important;
+                font-weight: 400 !important;
+                line-height: 1.35 !important;
+                letter-spacing: 0.1px !important;
+            }
+
+            .address-inline {
+                display: block !important;
+                text-align: center !important;
+            }
+
+            .hero-title {
+                font-size: 28px !important;
+                line-height: 1.2 !important;
+                padding: 22px 16px 14px 16px !important;
+            }
+
+            .hero-subtitle {
+                font-size: 20px !important;
+                line-height: 1.3 !important;
+                padding: 0 16px 24px 16px !important;
+            }
+
+            .features-wrap {
+                padding: 0 20px 20px 20px !important;
+            }
+
+            .feature-item {
+                display: block !important;
+                width: 100% !important;
+                padding: 0 0 18px 0 !important;
+                text-align: center !important;
+            }
+
+            .contact-mobile-gutter {
+                width: calc(100% - 32px) !important;
+                margin: 0 auto !important;
+            }
+
+            .contact-left-card,
+            .contact-middle-card,
+            .contact-right-card {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            .contact-left-card {
+                margin-bottom: 14px !important;
+            }
+
+            .contact-middle-card {
+                padding: 0 0 14px 0 !important;
+                height: auto !important;
+            }
+
+            .contact-right-card {
+                border-left: 0 !important;
+                border-top: 2px solid #c7a844 !important;
+                padding: 14px 0 0 0 !important;
+                height: auto !important;
+            }
+
+            .contact-row {
+                height: auto !important;
+            }
+
+            .contact-left-card {
+                height: auto !important;
+            }
+
+            .contact-middle-table {
+                height: auto !important;
+            }
+
+            .contact-middle-inner {
+                height: 160px !important;
+            }
+            .p1-m{
+                display: block;
+                padding: 0 16px !important;
+            }
+
+            .bottom-points-wrap {
+                padding: 16px !important;
+            }
+
+            .trust-icons-table,
+            .bottom-bullets-table {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .trust-icon-col,
+            .bottom-bullet-col {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            .trust-icon-col {
+                padding: 0 12px 16px 12px !important;
+            }
+
+            .bottom-bullet-col {
+                padding: 0 8px 10px 8px !important;
+                text-align: center !important;
+            }
+
+            .bottom-cta-table {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .bottom-cta-row {
+                height: auto !important;
+            }
+
+            .bottom-cta-qr,
+            .bottom-cta-btn,
+            .bottom-cta-contact {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                text-align: center !important;
+            }
+
+            .bottom-cta-qr {
+                padding-bottom: 10px !important;
+            }
+
+            .bottom-cta-btn {
+                padding: 0 0 10px 0 !important;
+            }
+
+            .bottom-cta-btn-box {
+                height: 160px !important;
+                font-size: 24px !important;
+            }
+
+            .bottom-cta-contact {
+                padding: 12px 0 0 0 !important;
+                border-left: 0 !important;
+                border-top: 0 !important;
+            }
+
+            .bottom-cta-contact p {
+                text-align: center !important;
+            }
+
+            .footer-legal-text {
+                font-size: 11px !important;
+                line-height: 1.35 !important;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0b2040;">
+        <tr>
+            <td align="center">
+
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" class="container"
+                    style="width: 100%; max-width: 800px;">
+                    <tr>
+                        <td class="header-white-box-cell" style="padding: 0px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="background-color: #ffffff; border-bottom: 5px solid #cfa838;">
+                                <tr>
+                                    <td align="center" class="header-logo-cell" style="padding: 20px 20px 10px 20px;">
+                                        <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/LOGO_JAZ_ASSUR.png"
+                                            alt="Jaz Assur" class="header-logo"
+                                            style="display: block; width: 160px; height: auto; border: 0; margin-bottom: -40px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" class="header-address-cell"
+                                        style="padding: 0 20px 20px 20px; text-align: right; font-size: 16px; font-weight: 400; line-height: 1.45; font-family: Arial, Helvetica, sans-serif; letter-spacing: 0.12px; color: #00071a;">
+                                        <span class="address-inline" style="display: inline-block; text-align: center;">
+                                            39 Ligne CAMBRAI<br>97427 RAVINE DES CABRIS
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hero-title"
+                            style="color: white; font-size: 40px; font-weight: 700; text-align: center; padding: 30px 20px 20px 20px; line-height: 1.2;">
+                            JAZ ASSUR OUVRE UNE NOUVELLE AGENCE À LA RAVINE DES CABRIS !
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hero-subtitle"
+                            style="color: white; font-size: 26px; font-weight: 500; text-align: center; padding: 0 20px 30px 20px; line-height: 1.3;">
+                            RÉDUISEZ VOS MENSUALITÉS D’ASSURANCE DE PRÊT
+                            AVEC UNE ÉTUDE PERSONNALISÉE.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="features-wrap" style="padding: 0 10px 24px 10px;">
+                            <table class="features-table" width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="width: 100%;">
+                                <tr>
+                                    <td class="feature-item" style="width: 25%; padding: 0 10px; vertical-align: top;">
+                                        <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/scale.png" width="70" alt="Icon"
+                                            style="display: block; margin: 0 auto; border: 0; height: auto;">
+                                        <p
+                                            style="color: white;font-weight: 500;font-size: 16px;text-align: center;line-height: 1.3em;">
+                                            MEILLEURES OFFRES DU MARCHÉ</p>
+                                    </td>
+                                    <td class="feature-item" style="width: 25%; padding: 0 10px; vertical-align: top;">
+                                        <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/pig.png" width="70" alt="Icon"
+                                            style="display: block; margin: 0 auto; border: 0; height: auto;">
+                                        <p
+                                            style="color: white;font-weight: 500;font-size: 16px;text-align: center;line-height: 1.3em;">
+                                            ÉCONOMISEZ JUSQU’À 15 000 €*</p>
+                                    </td>
+                                    <td class="feature-item" style="width: 25%; padding: 0 10px; vertical-align: top;">
+                                        <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/calander.png" width="70" alt="Icon"
+                                            style="display: block; margin: 0 auto; border: 0; height: auto;">
+                                        <p
+                                            style="color: white;font-weight: 500;font-size: 16px;text-align: center;line-height: 1.3em;">
+                                            RÉDUISEZ VOS MENSUALITÉS</p>
+                                    </td>
+                                    <td class="feature-item" style="width: 25%; padding: 0 10px; vertical-align: top;">
+                                        <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/lock.png" width="70" alt="Icon"
+                                            style="display: block; margin: 0 auto; border: 0; height: auto;">
+                                        <p
+                                            style="color: white;font-weight: 500;font-size: 16px;text-align: center;line-height: 1.3em;">
+                                            SÉCURISEZ VOTRE PROJET</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="p1-m">
+                        <td class="contact-section-wrap contact-mobile-gutter" style="border: 4px solid #c7a844;border-radius:20px;padding:16px; width: 100%;">
+                            <p style="color: #ffffff;text-align: center;font-weight: 500;font-size: 16px;padding-bottom: 16px;">VENEZ NOUS RENCONTRER DANS NOS BUREAUX</p>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="contact-grid" style="width: 100%;">
+                                <tr class="contact-row" style="height: 260px;">
+                                    <td width="33%" valign="top" class="contact-left-card" style="width: 33%; background-color: #24697a; padding:16px; border-radius: 16px; vertical-align: top; height: 260px;">
+                                        <h3 style="color: #ffffff; text-align: center; font-weight: 600; font-size: 35px; margin: 0; padding: 0px 0 10px 0;line-height: 1.1;">SCANNEZ <span style="color: #c7a844;">COMPAREZ</span> ÉCONOMISEZ</h3>
+                                        <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/QR.png" alt="QR Code" style="display: block; margin: 0 auto; border: 0; height: auto;width: 130px;">
+                                    </td>
+                                    <td width="30%" valign="top" class="contact-middle-card" style="width: 30%; padding: 0 16px; vertical-align: top; height: 290px;">
+                                        <table width="100%" height="270" cellpadding="0" cellspacing="0" border="0" class="contact-middle-table" style="height: 290px;">
+                                            <tr>
+                                                <td class="contact-middle-inner" height="270" style="background-color: #c7a844; padding: 0; border-radius: 16px; text-align: center; vertical-align: middle; height: 290px;">
+                                                    <a href="https://mkt.premista.fr/insurance/btob?key=58f272bb-03a3-471d-b15c-0ceead4a874b&partner=1Ex4VETt" style="display: table; width: 100%; height: 100%; color: white; text-decoration: none;">
+                                                        <span style="display: table-cell; vertical-align: middle; padding: 16px; text-align: center;">
+                                                            <span style="color: white; font-size: 25px; font-weight: 600; line-height: 1.2;">Je demande<br> mon étude</span>
+                                                        </span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="37%" valign="middle" class="contact-right-card" style="width: 37%; border-left: 2px solid #c7a844; padding-left: 16px; vertical-align: middle; height: 270px;">
+                                        <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" style="height: 100%;">
+                                            <tr>
+                                                <td valign="middle" style="vertical-align: middle;">
+                                                    <p style="color: white;font-size: 25px;font-weight: 600;text-align: left;line-height: 1.3em;margin-bottom: 26px;">Cabinet Assurance JAZ ASSUR</p>
+                                                    <ul style="list-style: none; padding-left: 0; margin: 0;">
+                                                        <li style="color: white;font-size: 18px;margin-bottom: 0px;">39 Ligne CAMBRAI</li>
+                                                        <li style="color: white;font-size: 18px;margin-bottom: 0px;">97427 RAVINE DES CABRIS</li>
+                                                        <li style="color: white;font-size: 18px;margin-bottom: 0px;">Mail: <a href="mailto:bureau@jazassur.com" style="color: white;text-decoration: none;">bureau@jazassur.com</a></li>
+                                                        <li style="color: white;font-size: 18px;margin-bottom: 0px;">Tel: <a href="tel:0262496649" style="color: white;text-decoration: none;">02 62 49 66 49</a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="trust-icons-table" style="width: 100%; max-width: 800px;">
+                            <tr>
+                                <td width="33%" class="trust-icon-col" style="width: 33.33%; padding: 0 30px; vertical-align: top;">
+                                    <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/sheild-check.png" width="70" alt="Icon"
+                                            style="display: block; margin: 0 auto; border: 0; height: auto;">
+                                            <p
+                                            style="color: white;font-weight: 500;font-size: 16px;text-align: center;line-height: 1.3em;">
+                                            Offre soumise <br>à conditions*</p>
+                                </td>
+                                <td width="33%" class="trust-icon-col" style="width: 33.33%; padding: 0 30px; vertical-align: top;">
+                                    <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/hand.png" width="70" alt="Icon"
+                                            style="display: block; margin: 0 auto; border: 0; height: auto;">
+                                            <p
+                                            style="color: white;font-weight: 500;font-size: 16px;text-align: center;line-height: 1.3em;">
+                                            Accompagnement<br> personnalisé</p>
+                                </td>
+                                <td width="33%" class="trust-icon-col" style="width: 33.33%; padding: 0 30px; vertical-align: top;">
+                                    <img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/doc.png" width="70" alt="Icon"
+                                            style="display: block; margin: 0 auto; border: 0; height: auto;">
+                                            <p
+                                            style="color: white;font-weight: 500;font-size: 16px;text-align: center;line-height: 1.3em;">
+                                            Convention <br>AERAS</p>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bottom-points-wrap" style="padding: 26px 16px 8px 16px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="bottom-bullets-table" style="width: 90%; margin: 0 auto;">
+                                <tr>
+                                    <td width="50%" class="bottom-bullet-col" style="width: 50%; color: white; font-weight: 500; font-size: 16px; text-align: left; line-height: 1.3em; padding: 0 14px 8px 14px; vertical-align: top;">• Meilleures offres du marché</td>
+                                    <td width="50%" class="bottom-bullet-col" style="width: 50%; color: white; font-weight: 500; font-size: 16px; text-align: left; line-height: 1.3em; padding: 0 14px 8px 14px; vertical-align: top;">• Sécurisez votre projet</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" class="bottom-bullet-col" style="width: 50%; color: white; font-weight: 500; font-size: 16px; text-align: left; line-height: 1.3em; padding: 0 14px 8px 14px; vertical-align: top;">• Économisez jusqu'à 15 000 €*</td>
+                                    <td width="50%" class="bottom-bullet-col" style="width: 50%; color: white; font-weight: 500; font-size: 16px; text-align: left; line-height: 1.3em; padding: 0 14px 8px 14px; vertical-align: top;">• Convention AERAS</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" class="bottom-bullet-col" style="width: 50%; color: white; font-weight: 500; font-size: 16px; text-align: left; line-height: 1.3em; padding: 0 14px; vertical-align: top;">• Réduisez vos mensualités</td>
+                                    <td width="50%" class="bottom-bullet-col" style="width: 50%; color: white; font-weight: 500; font-size: 16px; text-align: left; line-height: 1.3em; padding: 0 14px; vertical-align: top;">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 20px;">
+                            <table class="bottom-cta-table" style="background-color: #0f2d53;padding: 16px;border-radius: 20px;width: 100%;max-width: 800px;margin: 0 auto;">
+                                <tr class="bottom-cta-row" style="height: 150px;">
+                                    <td width="30%" class="bottom-cta-qr"><img src="https://raw.githubusercontent.com/reyad469/JazAssur-Email-Templete/refs/heads/main/QR.png" alt="QR Code" style="display: block; margin: 0 auto; border: 0; height: auto;width: 120px;"></td>
+                                    <td width="27%" class="bottom-cta-btn" style="text-align: center; vertical-align: middle;padding-right: 35px;">
+                                        <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" style="height: 100%;">
+                                            <tr>
+                                                <td class="bottom-cta-btn-box" valign="middle" style="background-color: #c7a844; border-radius: 10px; color: white; font-size: 24px; font-weight: 600; text-align: center; line-height: 1.2; height: 100%; vertical-align: middle;padding:5px 10px;">
+                                                    <a href="https://mkt.premista.fr/insurance/btob?key=58f272bb-03a3-471d-b15c-0ceead4a874b&partner=1Ex4VETt" style="display: table; width: 100%; height: 100%; color: white; text-decoration: none;">
+                                                        <span style="display: table-cell; vertical-align: middle;">
+                                                            Je demande<br>mon étude
+                                                        </span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="38%" class="bottom-cta-contact" valign="middle" style="width: 38%; padding: 0 10px; vertical-align: middle;">
+                                        <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" style="height: 100%;">
+                                            <tr>
+                                                <td valign="middle" style="vertical-align: middle;">
+                                                    <p style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; margin: 0; line-height: 1.4; letter-spacing: 0px; text-align: center; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%;">Cabinet Assurance JAZ ASSUR<br>39 Ligne CAMBRAI<br>97427 RAVINE DES CABRIS<br>Mail:&nbsp;<a href="mailto:bureau@jazassur.com" style="color: #ffffff; text-decoration: none;">bureau@jazassur.com</a><br>Tel:&nbsp;<a href="tel:0262496649" style="color: #ffffff; text-decoration: none;">02 62 49 66 49</a></p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 18px 20px 8px 20px; text-align: center;">
+                            <p style="color: #aabcd1; font-size: 14px; font-weight: 500; line-height: 1.35; margin: 0;">
+                                Pour vous désabonner de nos e-mails,
+                                <a href="https://mkt.premista.fr/insurance/btob?key=58f272bb-03a3-471d-b15c-0ceead4a874b&partner=1Ex4VETt" style="color: #aabcd1; text-decoration: underline;">cliquez ici</a>.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0 20px 22px 20px; text-align: center;">
+                            <table width="95%" cellpadding="0" cellspacing="0" border="0" style="width: 95%; margin: 0 auto;">
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <p class="footer-legal-text" style="color: #d7e0ea; font-size: 12px; font-weight: 400; line-height: 1.35; margin: 0; font-family: Arial, Helvetica, sans-serif;">
+                                            Offre courtage et Consuitting - SAS. courtier en assurances RDS Lyon 978 701 905 . Nous comparemons vous nos meillsures yotre oftes de offraurance enproteur g'es msgee. L'empronteur pout couserour en ss choix dans les condiliorous palivies aus ertiaies L.019 30 et surrent du ses. Les garanties et conditions figurant, la notice shitimemise lotsr d'adhesion. RC recomssniaile confurme au Code de assurances
+                                            Service réciamations : <a href="mailto:bureau@jazassur.com" style="color: #d7e0ea; text-decoration: none;">bureau@jazassur.com</a> . Euress voweeers-infes.fri. Mediation:
+                                            <a href="https://www.mediation-assurance.org" style="color: #d7e0ea; text-decoration: none;">www.mediation-assurance.org</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
